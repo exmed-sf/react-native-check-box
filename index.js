@@ -13,44 +13,14 @@ import {
     View,
     Image,
     Text,
-    TouchableHighlight,
-    ViewPropTypes as RNViewPropTypes,
+    TouchableHighlight
 } from 'react-native';
-import PropTypes from 'prop-types';
-
-const ViewPropTypes = RNViewPropTypes || View.propTypes;
 
 export default class CheckBox extends Component {
     constructor(props) {
         super(props);
     }
 
-    static propTypes = {
-        ...ViewPropTypes,
-        leftText: PropTypes.string,
-        leftTextView: PropTypes.element,
-        rightText: PropTypes.string,
-        leftTextStyle: PropTypes.oneOfType([
-            PropTypes.string,
-            PropTypes.number,
-            PropTypes.object,
-        ]),
-        rightTextView: PropTypes.element,
-        rightTextStyle: PropTypes.oneOfType([
-            PropTypes.string,
-            PropTypes.number,
-            PropTypes.object,
-        ]),
-        checkedImage: PropTypes.element,
-        unCheckedImage: PropTypes.element,
-        onClick: PropTypes.func.isRequired,
-        isChecked: PropTypes.bool.isRequired,
-        isIndeterminate: PropTypes.bool.isRequired,
-        checkBoxColor: PropTypes.string,
-        checkedCheckBoxColor: PropTypes.string,
-        uncheckedCheckBoxColor: PropTypes.string,
-        disabled: PropTypes.bool,
-    }
     static defaultProps = {
         isChecked: false,
         isIndeterminate: false,
